@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Office container</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- AOS (Animate on Scroll) CSS for animations -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- Google Fonts for better typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+        body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.hero {
+    position: relative;
+    background-image: url('https://www.advancedcontainer.com/wp-content/uploads/2024/08/shipping-container-office-Houston-TX.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 120px 0;
+    text-align: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark semi-transparent overlay */
+    z-index: 1; /* Make sure the overlay is behind the text */
+}
+
+.hero h1, .hero p {
+    position: relative;
+    z-index: 2; /* Ensure text appears above the overlay */
+    font-family: 'Poppins', sans-serif;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+
+.hero p {
+    font-size: 1.25rem;
+}
+
+.service-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service-details ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.service-details ul li {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #333;
+}
+
+.section-content {
+    padding: 60px 0;
+}
+
+.cta {
+    background-color: #040677;
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.cta h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.cta p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.cta button {
+    padding: 15px 35px;
+    font-size: 1.1rem;
+    background-color: #fff;
+    color: #040677;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta button:hover {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card-body {
+    padding: 20px;
+    text-align: center;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #777;
+}
+
+footer {
+    text-align: center;
+    padding: 40px 0;
+    background-color: #f8f9fa;
+    color: #333;
+    font-size: 1rem;
+}
+
+/* Media Queries for Responsiveness */
+
+@media (max-width: 1200px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero p {
+        font-size: 1.125rem;
+    }
+
+    .section-title {
+        font-size: 2.2rem;
+    }
+
+    .cta h3 {
+        font-size: 1.75rem;
+    }
+
+    .cta p {
+        font-size: 1.1rem;
+    }
+
+    .card-title {
+        font-size: 1.125rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero {
+        padding: 80px 0;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .cta h3 {
+        font-size: 1.5rem;
+    }
+
+    .cta p {
+        font-size: 1rem;
+    }
+
+    .card-title {
+        font-size: 1rem;
+    }
+
+    .service-details {
+        text-align: center;
+    }
+
+    .service-details .col-lg-6 {
+        margin-bottom: 30px;
+    }
+
+    .card-body {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .cta h3 {
+        font-size: 1.3rem;
+    }
+
+    .cta p {
+        font-size: 1rem;
+    }
+
+    .card-title {
+        font-size: 1rem;
+    }
+
+    .service-image {
+        max-width: 90%;
+    }
+
+    .card-img-top {
+        height: 200px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero h1 {
+        font-size: 1.75rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .cta h3 {
+        font-size: 1.2rem;
+    }
+
+    .cta p {
+        font-size: 1rem;
+    }
+
+    .card-title {
+        font-size: 1rem;
+    }
+
+    .service-image {
+        max-width: 100%;
+    }
+
+    .cta button {
+        padding: 10px 25px;
+        font-size: 1rem;
+    }
+}
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero text-center">
+        <div class="hero-overlay"></div> <!-- Overlay added here -->
+        <div class="container">
+            <h1 data-aos="fade-up">Office Containers</h1>
+            <p data-aos="fade-up" data-aos-delay="200">Innovative Office Containers for Modern Workspaces</p>
+        </div>
+    </section>
+
+    <!-- Service Details Section -->
+    <section class="service-details py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <img src="https://3.imimg.com/data3/UU/KX/MY-3319377/office-container-500x500.jpg" alt="Service Image" class="service-image">
+                </div>
+                <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
+                    <h2 class="section-title">Office Containers for Modern Workspaces
+                    </h2>
+                    <p>Discover the perfect solution for your workspace needs with our Office Containers for Modern Workspaces. We offer office containers in a variety of sizes to suit your requirements, including 8x10, 8x20, 10x20, 12x20, 8x40, 10x40, 12x40, 8x25, 10x25, and 12x25. Whether you need a compact office for a small team or a larger setup for a bustling workspace, our containers are designed for durability, functionality, and style.
+                    </p>
+                    <p> Tailored to meet diverse needs, these containers are ideal for temporary or permanent office solutions, offering a blend of flexibility and convenience for modern businesses.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Our Service Section -->
+    <section class="section-content bg-light">
+        <div class="container" data-aos="fade-up">
+            <h3 class="section-title">Why Choose Our Service?</h3>
+            <p>Choose our office container services for unmatched quality and flexibility. We offer a wide range of sizes to fit your specific needs, ensuring that your workspace is both functional and efficient. Our containers are crafted with durable materials to withstand diverse environments, making them ideal for temporary or permanent setups. With a focus on customization, timely delivery, and exceptional customer support, we are committed to providing cost-effective solutions tailored to modern workspaces. Experience convenience, reliability, and professionalism when you choose us for your office container needs.
+            </p>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="section-content">
+        <div class="container" data-aos="fade-up">
+            <h3 class="section-title">Our Office Containers Service Includes:</h3>
+            <div class="row">
+                <div class="col-md-4 mt-2">
+                    <div class="card shadow-lg" data-aos="zoom-in" data-aos-delay="100">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSG6QWbP0XuPlJZH7kbWIIWrPp6tNyN4o2lg&s" class="card-img-top" alt="Benefit 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Customizable Designs</h5>
+                            <p class="card-text">Tailor-made office containers to meet your specific layout and functionality needs, ensuring a workspace that suits your business perfectly.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-2">
+                    <div class="card shadow-lg" data-aos="zoom-in" data-aos-delay="200">
+                        <img src="https://www.roxboxcontainers.com/wp-content/uploads/2021/06/Office3.jpg" class="card-img-top" alt="Benefit 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Wide Range of Sizes</h5>
+                            <p class="card-text"> Containers available in various dimensions, including 8x10, 8x20, 10x20, and more, to accommodate teams of any size.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-2">
+                    <div class="card shadow-lg" data-aos="zoom-in" data-aos-delay="300">
+                        <img src="https://containertech.com/wp-content/uploads/2023/10/asg_RNB4gYt0p7UgPdlN_revision-_1631918562088-shutterstock_1942143184-scaled.jpg" class="card-img-top" alt="Benefit 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Durable and Secure Structures</h5>
+                            <p class="card-text"> Built with high-quality materials to provide a safe, weather-resistant, and long-lasting solution for your office needs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta" data-aos="fade-up">
+        <div class="container">
+            <h3>Ready to Get Started?</h3>
+            <p>Join us today and experience the best service we have to offer. We are here to help you every step of the way.</p>
+            <button>Get Started</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Your Company. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS and AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- Initialize AOS Animations -->
+    <script>
+        AOS.init({
+            duration: 1000, // Animation duration
+            easing: 'ease-in-out', // Easing function
+            once: true // Animate only once
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Detail</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- AOS (Animate on Scroll) CSS for animations -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- Google Fonts for better typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+        body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.hero {
+    position: relative;
+    background-image: url('https://www.mwconstruction.group/sites/default/files/styles/1280_x_720/public/2022-04/Pawilon-kontener-biurowy-dwukondygnacyjny-wizualizacja-003.jpg?itok=_DOvTGcI');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 120px 0;
+    text-align: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark semi-transparent overlay */
+    z-index: 1; /* Make sure the overlay is behind the text */
+}
+
+.hero h1, .hero p {
+    position: relative;
+    z-index: 2; /* Ensure text appears above the overlay */
+    font-family: 'Poppins', sans-serif;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+
+.hero p {
+    font-size: 1.25rem;
+}
+
+.service-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service-details ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.service-details ul li {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #333;
+}
+
+.section-content {
+    padding: 60px 0;
+}
+
+.cta {
+    background-color: #040677;
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.cta h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.cta p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.cta button {
+    padding: 15px 35px;
+    font-size: 1.1rem;
+    background-color: #fff;
+    color: #040677;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta button:hover {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card-body {
+    padding: 20px;
+    text-align: center;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #777;
+}
+
+footer {
+    text-align: center;
+    padding: 40px 0;
+    background-color: #f8f9fa;
+    color: #333;
+    font-size: 1rem;
+}
+
+/* Media Queries for Responsiveness */
+
+@media (max-width: 1200px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero p {
+        font-size: 1.125rem;
+    }
+
+    .section-title {
+        font-size: 2.2rem;
+    }
+
+    .cta h3 {
+        font-size: 1.75rem;
+    }
+
+    .cta p {
+        font-size: 1.1rem;
+    }
+
+    .card-title {
+        font-size: 1.125rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero {
+        padding: 80px 0;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .cta h3 {
+        font-size: 1.5rem;
+    }
+
+    .cta p {
+        font-size: 1rem;
+    }
+
+    .card-title {
+        font-size: 1rem;
+    }
+
+    .service-details {
+        text-align: center;
+    }
+
+    .service-details .col-lg-6 {
+        margin-bottom: 30px;
+    }
+
+    .card-body {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .cta h3 {
+        font-size: 1.3rem;
+    }
+
+    .cta p {
+        font-size: 1rem;
+    }
+
+    .card-title {
+        font-size: 1rem;
+    }
+
+    .service-image {
+        max-width: 90%;
+    }
+
+    .card-img-top {
+        height: 200px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero h1 {
+        font-size: 1.75rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .cta h3 {
+        font-size: 1.2rem;
+    }
+
+    .cta p {
+        font-size: 1rem;
+    }
+
+    .card-title {
+        font-size: 1rem;
+    }
+
+    .service-image {
+        max-width: 100%;
+    }
+
+    .cta button {
+        padding: 10px 25px;
+        font-size: 1rem;
+    }
+}
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero text-center">
+        <div class="hero-overlay"></div> <!-- Overlay added here -->
+        <div class="container">
+            <h1 data-aos="fade-up">Prefab Building Double Story</h1>
+            <p data-aos="fade-up" data-aos-delay="200">AL-RAHID is committed to delivering high-quality residential containers that meet your unique needs.</p>
+        </div>
+    </section>
+
+    <!-- Service Details Section -->
+    <section class="service-details py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <img src="https://s.alicdn.com/@sc04/kf/H40fe18d89d0d4f029e95178a3a96145dZ.jpg" alt="Service Image" class="service-image">
+                </div>
+                <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
+                    <h2 class="section-title">Prefab Building Double Story</h2>
+                    <p>At AL-RAHID, we redefine modern construction with our innovative and customizable Double Story Prefab Buildings. Designed for versatility and efficiency, our prefab structures are ideal for a wide range of applications, offering exceptional durability, aesthetic appeal, and functionality.</p>
+                    <p>From the elegant charm of a resort or hotel to the functional efficiency of labour rooms or a fast-food kitchen, our prefab double-story buildings provide versatile and modern solutions. Let us help you create a space that reflects your purpose and style.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Our Service Section -->
+    <section class="section-content bg-light">
+        <div class="container" data-aos="fade-up">
+            <h3 class="section-title">Why Choose AL-RAHID for Prefab Buildings?</h3>
+            <p>At AL-RAHID, we bring your vision to life with our expertise in prefab solutions. Our team collaborates closely with you to design, build, and deliver double-story structures that meet your unique requirements. Whether it’s a chic café, a bustling school, or a cozy home, we ensure every detail aligns with your goals.
+
+            </p>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="section-content">
+        <div class="container" data-aos="fade-up">
+            <h3 class="section-title">Key Features of Our Double Story Prefab Buildings</h3>
+            <div class="row">
+                <div class="col-md-4 mt-2">
+                    <div class="card shadow-lg" data-aos="zoom-in" data-aos-delay="100">
+                        <img src="https://www.chinacontainers.com/uploadfile/category/7e0cdcf8eb14dda05ead4fabfca26004.jpg" class="card-img-top" alt="Benefit 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Customizable Designs</h5>
+                            <p class="card-text">Tailor the structure to suit your specific needs, whether it's for personal use or commercial purposes.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-2">
+                    <div class="card shadow-lg" data-aos="zoom-in" data-aos-delay="200">
+                        <img src="https://www.prefabric.co.uk/wp-content/uploads/2016/07/127-m2-Prefabrik-Dublex-Ev-G%C3%B6r%C3%BCn%C3%BCm.jpg" class="card-img-top" alt="Benefit 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Energy Efficient</h5>
+                            <p class="card-text">Designed with insulation and ventilation systems to reduce energy consumption.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-2">
+                    <div class="card shadow-lg" data-aos="zoom-in" data-aos-delay="300">
+                        <img src="https://landcontainers.com/wp-content/uploads/2024/02/The-Architectural-Alchemy-of-Modern-Lofts.png" class="card-img-top" alt="Benefit 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Quick Installation</h5>
+                            <p class="card-text"> Faster and more efficient than traditional construction, minimizing downtime.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta" data-aos="fade-up">
+        <div class="container">
+            <h3>Ready to Get Started?</h3>
+            <p>Join us today and experience the best service we have to offer. We are here to help you every step of the way.</p>
+            <button>Get Started</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Your Company. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS and AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- Initialize AOS Animations -->
+    <script>
+        AOS.init({
+            duration: 1000, // Animation duration
+            easing: 'ease-in-out', // Easing function
+            once: true // Animate only once
+        });
+    </script>
+</body>
+</html>

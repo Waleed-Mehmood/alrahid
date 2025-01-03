@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Detail</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- AOS (Animate on Scroll) CSS for animations -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- Google Fonts for better typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+        body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.hero {
+    position: relative;
+    background-image: url('https://storage-tech.ca/wp-content/uploads/2023/11/IMG_9386-e1705604036471.webp');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 120px 0;
+    text-align: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark semi-transparent overlay */
+    z-index: 1; /* Make sure the overlay is behind the text */
+}
+
+.hero h1, .hero p {
+    position: relative;
+    z-index: 2; /* Ensure text appears above the overlay */
+    font-family: 'Poppins', sans-serif;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+
+.hero p {
+    font-size: 1.25rem;
+}
+
+.service-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service-details ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.service-details ul li {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #333;
+}
+
+.section-content {
+    padding: 60px 0;
+}
+
+.cta {
+    background-color: #040677;
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.cta h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.cta p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.cta button {
+    padding: 15px 35px;
+    font-size: 1.1rem;
+    background-color: #fff;
+    color: #040677;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta button:hover {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card-body {
+    padding: 20px;
+    text-align: center;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #777;
+}
+
+footer {
+    text-align: center;
+    padding: 40px 0;
+    background-color: #f8f9fa;
+    color: #333;
+    font-size: 1rem;
+}
+
+/* Media Queries for Responsiveness */
+
+@media (max-width: 1200px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero p {
+        font-size: 1.125rem;
+    }
+
+    .section-title {
+        font-size: 2.2rem;
+    }
+
+    .cta h3 {
+        font-size: 1.75rem;
+    }
+
+    .cta p {
+        font-size: 1.1rem;
+    }
+
+    .card-title {
+        font-size: 1.125rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero {
+        padding: 80px 0;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .cta h3 {
+        font-size: 1.5rem;
+    }
+
+    .cta p {
+        font-size: 1rem;
+    }
+
+    .card-title {
+        font-size: 1rem;
+    }
+
+    .service-details {
+        text-align: center;
+    }
+
+    .service-details .col-lg-6 {
+        margin-bottom: 30px;
+    }
+
+    .card-body {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .cta h3 {
+        font-size: 1.3rem;
+    }
+
+    .cta p {
+        font-size: 1rem;
+    }
+
+    .card-title {
+        font-size: 1rem;
+    }
+
+    .service-image {
+        max-width: 90%;
+    }
+
+    .card-img-top {
+        height: 200px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero h1 {
+        font-size: 1.75rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .cta h3 {
+        font-size: 1.2rem;
+    }
+
+    .cta p {
+        font-size: 1rem;
+    }
+
+    .card-title {
+        font-size: 1rem;
+    }
+
+    .service-image {
+        max-width: 100%;
+    }
+
+    .cta button {
+        padding: 10px 25px;
+        font-size: 1rem;
+    }
+}
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero text-center">
+        <div class="hero-overlay"></div> <!-- Overlay added here -->
+        <div class="container">
+            <h1 data-aos="fade-up">Residential Containers</h1>
+            <p data-aos="fade-up" data-aos-delay="200">AL-RAHID is committed to delivering high-quality residential containers that meet your unique needs.</p>
+        </div>
+    </section>
+
+    <!-- Service Details Section -->
+    <section class="service-details py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <img src="https://s.alicdn.com/@sc04/kf/H40fe18d89d0d4f029e95178a3a96145dZ.jpg" alt="Service Image" class="service-image">
+                </div>
+                <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
+                    <h2 class="section-title">Residential Containers</h2>
+                    <p>At AL-RAHID, we specialize in providing high-quality, durable, and customizable residential containers to meet the diverse needs of modern living. Our containers are designed to offer comfort, functionality, and efficiency, making them perfect for a wide range of residential applications.</p>
+                    <p>With years of expertise in modular solutions, AL-RAHID is committed to delivering high-quality residential containers that meet your unique needs. Our team works closely with you to design, build, and deliver containers that reflect your style, preferences, and functional requirements.We offer residential containers in a variety of sizes to accommodate your needs.Sizes includes:8x10, 8x20, 10x20, 12x20, 8x40, 10x40, 12x40, 8x25, 10x25, and 12x25.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Our Service Section -->
+    <section class="section-content bg-light">
+        <div class="container" data-aos="fade-up">
+            <h3 class="section-title">Why Choose Our Service?</h3>
+            <p>Residential containers are a versatile and cost-effective alternative to traditional housing. They are ideal for temporary or permanent living spaces and can be customized to suit your specific requirements. Whether you're looking for a standalone unit, an additional living space, or even a multi-story solution, our residential containers are engineered for convenience and durability.</p>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="section-content">
+        <div class="container" data-aos="fade-up">
+            <h3 class="section-title">Benefits of Residential Containers</h3>
+            <div class="row">
+                <div class="col-md-4 mt-2">
+                    <div class="card shadow-lg" data-aos="zoom-in" data-aos-delay="100">
+                        <img src="https://www.chinacontainers.com/uploadfile/category/7e0cdcf8eb14dda05ead4fabfca26004.jpg" class="card-img-top" alt="Benefit 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Cost-Effective</h5>
+                            <p class="card-text">Significantly more affordable than traditional construction methods.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-2">
+                    <div class="card shadow-lg" data-aos="zoom-in" data-aos-delay="200">
+                        <img src="https://lovecontainerhomes.com/wp-content/uploads/2023/09/Tiny-Container-Home-Project.webp" class="card-img-top" alt="Benefit 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Quick Installation</h5>
+                            <p class="card-text"> Ready to use within days, saving you time and effort.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-2">
+                    <div class="card shadow-lg" data-aos="zoom-in" data-aos-delay="300">
+                        <img src="https://landcontainers.com/wp-content/uploads/2024/02/The-Architectural-Alchemy-of-Modern-Lofts.png" class="card-img-top" alt="Benefit 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Customizable</h5>
+                            <p class="card-text"> Tailor the design, layout, and interior finishes to meet your specific needs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta" data-aos="fade-up">
+        <div class="container">
+            <h3>Ready to Get Started?</h3>
+            <p>Join us today and experience the best service we have to offer. We are here to help you every step of the way.</p>
+            <button>Get Started</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Your Company. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS and AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- Initialize AOS Animations -->
+    <script>
+        AOS.init({
+            duration: 1000, // Animation duration
+            easing: 'ease-in-out', // Easing function
+            once: true // Animate only once
+        });
+    </script>
+</body>
+</html>
